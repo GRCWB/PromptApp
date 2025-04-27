@@ -1,3 +1,14 @@
+import PromptForm from "@/components/PromptForm";
+
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-4">
+      <h1 className="text-2xl font-bold mb-4">Gerador de Site/App com IA 🤖</h1>
+      <PromptForm />
+    </main>
+  );
+}
+
 
 import React from "react";
 import NavBar from "@/components/NavBar";
