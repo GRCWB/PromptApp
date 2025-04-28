@@ -21,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       body: JSON.stringify({
         model: 'gpt-4',
         messages: [
-          { role: 'system', content: 'Você é um assistente que gera sites ou aplicativos.' },
-          { role: 'user', content: `Gere um código completo em HTML/CSS ou React/Next.js baseado neste pedido: ${prompt}` },
+          { role: 'system', content: 'Você é um assistente que gera sites e aplicativos.' },
+          { role: 'user', content: `Crie um site ou app com base nesse pedido: ${prompt}` },
         ],
         temperature: 0.7,
         max_tokens: 2000,
@@ -38,4 +38,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Erro interno ao gerar site' });
   }
 }
-
